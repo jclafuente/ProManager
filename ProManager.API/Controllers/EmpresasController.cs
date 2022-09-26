@@ -53,7 +53,7 @@ namespace ProManager.API.Controllers
             return Ok(empresaDTO);
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IHttpActionResult> PostEmpresa(EmpresaDTO empresaDTO)
         {
             if (!ModelState.IsValid)
