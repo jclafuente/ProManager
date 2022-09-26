@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProManager", "ProManager\ProManager.csproj", "{CF2945A3-FF0F-4EC4-8EA3-52F5890AEE64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProManager.BL", "ProManager.BL\ProManager.BL.csproj", "{3DC93477-AC35-4A45-9C13-619BD657A1DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProManager.API", "ProManager.API\ProManager.API.csproj", "{64B0A1B5-2ADA-4EDE-8D14-9CBDE9DA7463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CF2945A3-FF0F-4EC4-8EA3-52F5890AEE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2945A3-FF0F-4EC4-8EA3-52F5890AEE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2945A3-FF0F-4EC4-8EA3-52F5890AEE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC93477-AC35-4A45-9C13-619BD657A1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC93477-AC35-4A45-9C13-619BD657A1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC93477-AC35-4A45-9C13-619BD657A1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC93477-AC35-4A45-9C13-619BD657A1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B0A1B5-2ADA-4EDE-8D14-9CBDE9DA7463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B0A1B5-2ADA-4EDE-8D14-9CBDE9DA7463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B0A1B5-2ADA-4EDE-8D14-9CBDE9DA7463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B0A1B5-2ADA-4EDE-8D14-9CBDE9DA7463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
