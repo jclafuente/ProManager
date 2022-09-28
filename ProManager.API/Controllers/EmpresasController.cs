@@ -12,10 +12,12 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 using System.Web.Mvc.Razor;
 
 namespace ProManager.API.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/Empresas")]
     public class EmpresasController : ApiController
     {
@@ -27,7 +29,13 @@ namespace ProManager.API.Controllers
             this.mapper = WebApiApplication.MapperConfiguration.CreateMapper();
         }
 
+        /// <summary>
+        /// Obtiene los objetos de empresas 
+        /// </summary>
+        /// <returns>Listado de los objetos de empresas</returns>
+        /// <response code="200">OK. Devuelve el listado de objetos solicitado.</response>
         [HttpGet]
+        [ResponseType(typeof(IEnumerable<EmpresaDTO>))]
         public async Task<IHttpActionResult> GetAll()
         {
 
@@ -41,7 +49,18 @@ namespace ProManager.API.Controllers
             return Ok(empresasDTO);
         }
 
+        /// <summary>
+        /// Obtiene una empresa por su Id. 
+        /// </summary>
+        /// <remarks>
+        /// Aquí una descripción mas larga si fuera necesario. Obtiene un objeto por su Id.
+        /// </remarks>
+        /// <param name="id">Id de la empresa</param>
+        /// <returns>Empresa correspondiente al Id ingresado</returns>
+        /// <response code="200">Ok. Devuelve el objeto solicitado.</response>
+        /// <response code="404">Not Found. No se ha encontrado el objeto Solicitado.</response>
         [HttpGet]
+        [ResponseType(typeof(EmpresaDTO))]
         public async Task<IHttpActionResult> GetById(int id)
         {
             var empresa = await empresaServise.GetById(id);
