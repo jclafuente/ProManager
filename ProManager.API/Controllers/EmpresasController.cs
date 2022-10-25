@@ -17,6 +17,9 @@ using System.Web.Mvc.Razor;
 
 namespace ProManager.API.Controllers
 {
+    /// <summary>
+    /// RestController para manejo de las empresas
+    /// </summary>
     [Authorize]
     [RoutePrefix("api/Empresas")]
     public class EmpresasController : ApiController
@@ -24,6 +27,9 @@ namespace ProManager.API.Controllers
         private IMapper mapper;
         private readonly EmpresaService empresaServise = new EmpresaService(new EmpresaRepository(ProManagerContext.Create()));
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public EmpresasController()
         {
             this.mapper = WebApiApplication.MapperConfiguration.CreateMapper();
